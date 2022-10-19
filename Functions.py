@@ -781,7 +781,7 @@ def set_standard_values(old_form):
         elif form_el.itype == "hidden":
             pass
         elif form_el.itype == "password":
-            form_el.value = "jAEkPot"
+            form_el.value = "Vmuser8080@utoronto"
             #form_el.value = "jAEkPot1"
         elif form_el.itype == "number":
             # TODO Look at min/max/step/maxlength to pick valid numbers
