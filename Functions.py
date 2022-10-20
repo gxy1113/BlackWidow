@@ -771,13 +771,13 @@ def set_standard_values(old_form):
             if form_el.value and form_el.value.isdigit():
                 form_el.value = 1
             elif form_el.name == "email":
-                form_el.value = "jaekpot@localhost.com"
+                form_el.value = "vmuser8080@outlook.com"
             else:
                 form_el.value = "jAEkPot"
         elif form_el.itype == "textarea":
             form_el.value = "jAEkPot"
         elif form_el.itype == "email":
-            form_el.value = "jaekpot@localhost.com"
+            form_el.value = "vmuser8080@outlook.com"
         elif form_el.itype == "hidden":
             pass
         elif form_el.itype == "password":
