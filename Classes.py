@@ -30,6 +30,7 @@ from extractors.Forms import extract_forms, parse_form
 from extractors.Urls import extract_urls
 from extractors.Iframes import extract_iframes
 from extractors.Ui_forms import extract_ui_forms
+from datetime import datetime
 
 
 import logging

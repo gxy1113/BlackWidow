@@ -1,0 +1,967 @@
+2022-11-26:13:12:47	root	INFO	[Classes.py:483]	Init crawl on http://wordpressbw.csl.toronto.edu/wp-admin/
+2022-11-26:13:12:47	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:47	root	WARNING	[Classes.py:149]	Failed to connect edge, get None (True True False)
+2022-11-26:13:12:47	root	INFO	[Functions.py:163]	Check edge: [get] ROOTREQ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-admin/
+2022-11-26:13:12:47	root	INFO	[Functions.py:207]	Follow edge: [get] ROOTREQ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-admin/
+2022-11-26:13:12:48	root	INFO	[Classes.py:1341]	Current url: http://wordpressbw.csl.toronto.edu/wp-login.php?redirect_to=http%3A%2F%2Fwordpressbw.csl.toronto.edu%2Fwp-admin%2F&reauth=1
+2022-11-26:13:12:48	root	INFO	[Classes.py:1342]	Crawl (edge): [get] ROOTREQ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-admin/
+2022-11-26:13:12:48	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:48	root	INFO	[Functions.py:889]	NEED TO LOGIN FOR FORM: Form(7, http://wordpressbw.csl.toronto.edu/wp-login.php, post)
+2022-11-26:13:12:48	root	INFO	[Classes.py:1419]	Found login form
+2022-11-26:13:12:48	root	INFO	[Functions.py:833]	set_form_values got 1
+2022-11-26:13:12:48	root	INFO	[Functions.py:846]	set_form_values returned 2
+2022-11-26:13:12:48	root	DEBUG	[Functions.py:436]	Filling Form(7, http://wordpressbw.csl.toronto.edu/wp-login.php, post)
+2022-11-26:13:12:48	root	INFO	[Functions.py:445]	No alert removed (probably due to there not being any)
+2022-11-26:13:12:49	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:49	root	WARNING	[Functions.py:511]	Default handling for ('text', 'log', None) 
+2022-11-26:13:12:49	root	INFO	[Functions.py:574]	Filling in input log
+2022-11-26:13:12:49	root	WARNING	[Functions.py:511]	Default handling for ('password', 'pwd', None) 
+2022-11-26:13:12:49	root	INFO	[Functions.py:574]	Filling in input pwd
+2022-11-26:13:12:49	root	INFO	[Functions.py:574]	Filling in input rememberme
+2022-11-26:13:12:49	root	INFO	[Functions.py:574]	Filling in input wp-submit
+2022-11-26:13:12:49	root	WARNING	[Functions.py:511]	Default handling for ('hidden', 'redirect_to', 'http://wordpressbw.csl.toronto.edu/wp-admin/') 
+2022-11-26:13:12:49	root	INFO	[Functions.py:574]	Filling in input redirect_to
+2022-11-26:13:12:49	root	WARNING	[Functions.py:511]	Default handling for ('hidden', 'testcookie', '1') 
+2022-11-26:13:12:49	root	INFO	[Functions.py:574]	Filling in input testcookie
+2022-11-26:13:12:49	root	WARNING	[Functions.py:511]	Default handling for ('button', None, None) 
+2022-11-26:13:12:49	root	WARNING	[Functions.py:572]	[inputs] could NOT FIND ('button', None, None)
+2022-11-26:13:12:49	root	WARNING	[Functions.py:573]	--{('text', 'log', None): ('text', 'log', 'jAEkPot'), ('password', 'pwd', None): ('password', 'pwd', 'Vmuser8080@utoronto'), ('checkbox', 'rememberme', 'forever', None): ('checkbox', 'rememberme', 'forever', True), ('submit', 'wp-submit', 'Log In', None): ('submit', 'wp-submit', 'Log In', True), ('hidden', 'redirect_to', 'http://wordpressbw.csl.toronto.edu/wp-admin/'): ('hidden', 'redirect_to', 'http://wordpressbw.csl.toronto.edu/wp-admin/'), ('hidden', 'testcookie', '1'): ('hidden', 'testcookie', '1'), ('button', '', ''): ('button', '', '')}
+2022-11-26:13:12:49	root	INFO	[Functions.py:574]	Filling in input 
+2022-11-26:13:12:49	root	INFO	[Functions.py:651]	form_fill Clicking on submit button
+2022-11-26:13:12:50	root	INFO	[Functions.py:698]	No alert removed (probably due to there not being any)
+2022-11-26:13:12:51	root	DEBUG	[Urls.py:121]	URLs from extract_urls {[get] https://make.wordpress.org/community/organize-event-landing-page/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-writing.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/upload.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/users.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/theme-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=post_tag, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-install.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-permalink.php, [get] https://www.meetup.com/buffalo-wordpress/events/289701695, [get] https://buddypress.org/2022/11/buddypress-11-0-0-beta2/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-privacy.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/export-personal-data.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/erase-personal-data.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=page, [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/export.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-media.php, [get] https://planet.wordpress.org/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=trashcomment&p=1&c=1&_wpnonce=66bfea5f79, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=mine&user_id=2, [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=trash, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-discussion.php, [get] https://wordpress.org/support/, [get] https://wordpress.org/, [get] https://wordpress.org/news/2022/11/state-of-the-word-2022/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-navigation, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=approvecomment&p=1&c=1&_wpnonce=00390910a7, [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php, [get] https://central.wordcamp.org/schedule/, [get] http://wordpressbw.csl.toronto.edu/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wpbody-content, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=spamcomment&p=1&c=1&_wpnonce=66bfea5f79, [get] https://wptavern.com/dig-into-the-open-web, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=spam, [get] http://wordpressbw.csl.toronto.edu/wp-admin/tools.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=unapprovecomment&p=1&c=1&_wpnonce=00390910a7, [get] http://wordpressbw.csl.toronto.edu/wp-admin/?welcome=0, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=approved, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post.php?post=1&action=edit, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-layout, [get] http://wordpressbw.csl.toronto.edu/wp-login.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-reading.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php?styles=open, [get] https://wordpress.org/support/article/dashboard-screen/, [get] https://wordpress.org/support/wordpress-version/version-6-1-1/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/index.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-content, [get] http://wordpressbw.csl.toronto.edu/wp-login.php?action=logout&_wpnonce=827848a719, [get] http://wordpressbw.csl.toronto.edu/wp-admin/import.php, [get] https://wordpress.org/support/forums/, [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/#comment-1, [get] https://wordpress.org/news/, [get] https://make.wordpress.org/community/meetups-landing-page, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=category, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wp-toolbar, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#, [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php, [get] https://poststatus.com/wordpress-is-people-weekly-community-update/, [get] https://wordpress.org/news/2022/11/the-month-in-wordpress-october-2022/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-overview, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-health.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=post, [get] https://wordpress.org/support/forum/requests-and-feedback, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=moderated, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-general.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=editcomment&c=1, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=all}
+2022-11-26:13:12:52	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:52	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:52	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:52	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:53	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:53	root	INFO	[Functions.py:833]	set_form_values got 5
+2022-11-26:13:12:53	root	WARNING	[Functions.py:794]	('search', None, None) was handled by default
+2022-11-26:13:12:53	root	INFO	[Functions.py:846]	set_form_values returned 4
+2022-11-26:13:12:53	root	INFO	[Classes.py:1451]	Adding requests from URLs
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://make.wordpress.org/community/organize-event-landing-page/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://make.wordpress.org/community/organize-event-landing-page/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://make.wordpress.org/community/organize-event-landing-page/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-writing.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/upload.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/users.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/theme-editor.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=post_tag 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-install.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-permalink.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://www.meetup.com/buffalo-wordpress/events/289701695 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://www.meetup.com/buffalo-wordpress/events/289701695
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://www.meetup.com/buffalo-wordpress/events/289701695
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://buddypress.org/2022/11/buddypress-11-0-0-beta2/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://buddypress.org/2022/11/buddypress-11-0-0-beta2/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://buddypress.org/2022/11/buddypress-11-0-0-beta2/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-privacy.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/export-personal-data.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/erase-personal-data.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=page 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/export.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-media.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://planet.wordpress.org/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://planet.wordpress.org/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://planet.wordpress.org/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=trashcomment&p=1&c=1&_wpnonce=66bfea5f79 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=mine&user_id=2 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=trash 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-discussion.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/support/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/news/2022/11/state-of-the-word-2022/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/news/2022/11/state-of-the-word-2022/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/news/2022/11/state-of-the-word-2022/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-navigation 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-editor.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=approvecomment&p=1&c=1&_wpnonce=00390910a7 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://central.wordcamp.org/schedule/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://central.wordcamp.org/schedule/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://central.wordcamp.org/schedule/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wpbody-content 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=spamcomment&p=1&c=1&_wpnonce=66bfea5f79 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wptavern.com/dig-into-the-open-web 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wptavern.com/dig-into-the-open-web
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wptavern.com/dig-into-the-open-web
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=spam 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/tools.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=unapprovecomment&p=1&c=1&_wpnonce=00390910a7 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/?welcome=0 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=approved 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/post.php?post=1&action=edit 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-layout 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-reading.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php?styles=open 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/article/dashboard-screen/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/article/dashboard-screen/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/support/article/dashboard-screen/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/wordpress-version/version-6-1-1/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/wordpress-version/version-6-1-1/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/support/wordpress-version/version-6-1-1/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/index.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-content 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-login.php?action=logout&_wpnonce=827848a719 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/import.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/forums/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/forums/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/support/forums/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/#comment-1 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/news/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/news/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/news/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://make.wordpress.org/community/meetups-landing-page 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://make.wordpress.org/community/meetups-landing-page
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://make.wordpress.org/community/meetups-landing-page
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=category 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wp-toolbar 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/# 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://poststatus.com/wordpress-is-people-weekly-community-update/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://poststatus.com/wordpress-is-people-weekly-community-update/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://poststatus.com/wordpress-is-people-weekly-community-update/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/news/2022/11/the-month-in-wordpress-october-2022/ 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/news/2022/11/the-month-in-wordpress-october-2022/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/news/2022/11/the-month-in-wordpress-october-2022/
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-overview 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-health.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=post 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/forum/requests-and-feedback 
+2022-11-26:13:12:53	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/forum/requests-and-feedback
+2022-11-26:13:12:53	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] https://wordpress.org/support/forum/requests-and-feedback
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=moderated 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-general.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=editcomment&c=1 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=all 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1461]	Adding requests from froms
+2022-11-26:13:12:53	root	INFO	[Classes.py:1464]	from forms [get] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1464]	from forms [post] http://wordpressbw.csl.toronto.edu/wp-admin/post.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1464]	from forms [get] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1464]	from forms [post] http://wordpressbw.csl.toronto.edu/wp-admin/admin-ajax.php 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1472]	Adding requests from events
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:53	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:53	root	INFO	[Classes.py:1484]	Adding requests from iframes
+2022-11-26:13:12:53	root	INFO	[Classes.py:1496]	Adding requests from ui_forms
+2022-11-26:13:12:54	root	INFO	[Functions.py:163]	Check edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/
+2022-11-26:13:12:54	root	INFO	[Functions.py:207]	Follow edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/
+2022-11-26:13:12:55	root	INFO	[Classes.py:1341]	Current url: http://wordpressbw.csl.toronto.edu/
+2022-11-26:13:12:55	root	INFO	[Classes.py:1342]	Crawl (edge): [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/
+2022-11-26:13:12:56	root	DEBUG	[Urls.py:121]	URLs from extract_urls {[get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php, [get] https://wordpress.org/support/, [get] https://wordpress.org/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/, [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page, [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php, [get] http://wordpressbw.csl.toronto.edu/, [get] http://wordpressbw.csl.toronto.edu/wp-login.php?action=logout&_wpnonce=827848a719, [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php, [get] http://wordpressbw.csl.toronto.edu/#wp--skip-link--target, [get] https://wordpress.org/support/forums/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php, [get] https://wordpress.org/support/forum/requests-and-feedback, [get] http://wordpressbw.csl.toronto.edu/sample-page/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php}
+2022-11-26:13:12:56	root	INFO	[Functions.py:833]	set_form_values got 1
+2022-11-26:13:12:56	root	INFO	[Functions.py:846]	set_form_values returned 1
+2022-11-26:13:12:56	root	INFO	[Classes.py:1451]	Adding requests from URLs
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/ 
+2022-11-26:13:12:56	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/
+2022-11-26:13:12:56	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/ -(get None[False])-> [get] https://wordpress.org/support/
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/ 
+2022-11-26:13:12:56	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/
+2022-11-26:13:12:56	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/ -(get None[False])-> [get] https://wordpress.org/
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-login.php?action=logout&_wpnonce=827848a719 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-login.php?action=logout&_wpnonce=827848a719, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/#wp--skip-link--target 
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/forums/ 
+2022-11-26:13:12:56	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/forums/
+2022-11-26:13:12:56	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/ -(get None[False])-> [get] https://wordpress.org/support/forums/
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/forum/requests-and-feedback 
+2022-11-26:13:12:56	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/forum/requests-and-feedback
+2022-11-26:13:12:56	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/ -(get None[False])-> [get] https://wordpress.org/support/forum/requests-and-feedback
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/sample-page/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1461]	Adding requests from froms
+2022-11-26:13:12:56	root	INFO	[Classes.py:1464]	from forms [get] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1472]	Adding requests from events
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:12:56	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:12:56	root	INFO	[Classes.py:1484]	Adding requests from iframes
+2022-11-26:13:12:56	root	INFO	[Classes.py:1496]	Adding requests from ui_forms
+2022-11-26:13:12:56	root	INFO	[Functions.py:163]	Check edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-login.php
+2022-11-26:13:12:56	root	INFO	[Functions.py:207]	Follow edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-login.php
+2022-11-26:13:12:57	root	INFO	[Classes.py:1341]	Current url: http://wordpressbw.csl.toronto.edu/wp-login.php
+2022-11-26:13:12:57	root	INFO	[Classes.py:1342]	Crawl (edge): [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-login.php
+2022-11-26:13:12:57	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:57	root	INFO	[Functions.py:889]	NEED TO LOGIN FOR FORM: Form(7, http://wordpressbw.csl.toronto.edu/wp-login.php, post)
+2022-11-26:13:12:57	root	INFO	[Classes.py:1419]	Found login form
+2022-11-26:13:12:57	root	INFO	[Functions.py:833]	set_form_values got 1
+2022-11-26:13:12:57	root	INFO	[Functions.py:846]	set_form_values returned 2
+2022-11-26:13:12:57	root	DEBUG	[Functions.py:436]	Filling Form(7, http://wordpressbw.csl.toronto.edu/wp-login.php, post)
+2022-11-26:13:12:57	root	INFO	[Functions.py:445]	No alert removed (probably due to there not being any)
+2022-11-26:13:12:57	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:12:57	root	WARNING	[Functions.py:511]	Default handling for ('text', 'log', 'jAEkPot') 
+2022-11-26:13:12:57	root	INFO	[Functions.py:574]	Filling in input log
+2022-11-26:13:12:57	root	WARNING	[Functions.py:511]	Default handling for ('password', 'pwd', None) 
+2022-11-26:13:12:57	root	INFO	[Functions.py:574]	Filling in input pwd
+2022-11-26:13:12:58	root	INFO	[Functions.py:574]	Filling in input rememberme
+2022-11-26:13:12:58	root	INFO	[Functions.py:574]	Filling in input wp-submit
+2022-11-26:13:12:58	root	WARNING	[Functions.py:511]	Default handling for ('hidden', 'redirect_to', 'http://wordpressbw.csl.toronto.edu/wp-admin/') 
+2022-11-26:13:12:58	root	INFO	[Functions.py:574]	Filling in input redirect_to
+2022-11-26:13:12:58	root	WARNING	[Functions.py:511]	Default handling for ('hidden', 'testcookie', '1') 
+2022-11-26:13:12:58	root	INFO	[Functions.py:574]	Filling in input testcookie
+2022-11-26:13:12:58	root	WARNING	[Functions.py:511]	Default handling for ('button', None, None) 
+2022-11-26:13:12:58	root	WARNING	[Functions.py:572]	[inputs] could NOT FIND ('button', None, None)
+2022-11-26:13:12:58	root	WARNING	[Functions.py:573]	--{('text', 'log', 'jAEkPot'): ('text', 'log', 'jAEkPot'), ('password', 'pwd', None): ('password', 'pwd', 'Vmuser8080@utoronto'), ('checkbox', 'rememberme', 'forever', None): ('checkbox', 'rememberme', 'forever', True), ('submit', 'wp-submit', 'Log In', None): ('submit', 'wp-submit', 'Log In', True), ('hidden', 'redirect_to', 'http://wordpressbw.csl.toronto.edu/wp-admin/'): ('hidden', 'redirect_to', 'http://wordpressbw.csl.toronto.edu/wp-admin/'), ('hidden', 'testcookie', '1'): ('hidden', 'testcookie', '1'), ('button', '', ''): ('button', '', '')}
+2022-11-26:13:12:58	root	INFO	[Functions.py:574]	Filling in input 
+2022-11-26:13:12:58	root	INFO	[Functions.py:651]	form_fill Clicking on submit button
+2022-11-26:13:12:59	root	INFO	[Functions.py:698]	No alert removed (probably due to there not being any)
+2022-11-26:13:13:00	root	DEBUG	[Urls.py:121]	URLs from extract_urls {[get] https://make.wordpress.org/community/organize-event-landing-page/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-writing.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/upload.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/users.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/theme-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=post_tag, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-install.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-permalink.php, [get] https://www.meetup.com/buffalo-wordpress/events/289701695, [get] https://buddypress.org/2022/11/buddypress-11-0-0-beta2/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-privacy.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/export-personal-data.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/erase-personal-data.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=page, [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/export.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-media.php, [get] https://planet.wordpress.org/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=mine&user_id=2, [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=spamcomment&p=1&c=1&_wpnonce=2644be40dc, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=trash, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=unapprovecomment&p=1&c=1&_wpnonce=274e5479b7, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-discussion.php, [get] https://wordpress.org/support/, [get] https://wordpress.org/, [get] https://wordpress.org/news/2022/11/state-of-the-word-2022/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-navigation, [get] http://wordpressbw.csl.toronto.edu/wp-login.php?action=logout&_wpnonce=57021da80b, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php, [get] https://central.wordcamp.org/schedule/, [get] http://wordpressbw.csl.toronto.edu/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wpbody-content, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php, [get] https://wptavern.com/dig-into-the-open-web, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=spam, [get] http://wordpressbw.csl.toronto.edu/wp-admin/tools.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=approvecomment&p=1&c=1&_wpnonce=274e5479b7, [get] http://wordpressbw.csl.toronto.edu/wp-admin/?welcome=0, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=approved, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post.php?post=1&action=edit, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-layout, [get] http://wordpressbw.csl.toronto.edu/wp-login.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-reading.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php?styles=open, [get] https://wordpress.org/support/article/dashboard-screen/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/index.php, [get] https://wordpress.org/support/wordpress-version/version-6-1-1/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-content, [get] http://wordpressbw.csl.toronto.edu/wp-admin/import.php, [get] https://wordpress.org/support/forums/, [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/#comment-1, [get] https://wordpress.org/news/, [get] https://make.wordpress.org/community/meetups-landing-page, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=category, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wp-toolbar, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#, [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php, [get] https://poststatus.com/wordpress-is-people-weekly-community-update/, [get] https://wordpress.org/news/2022/11/the-month-in-wordpress-october-2022/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-overview, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-health.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=post, [get] https://wordpress.org/support/forum/requests-and-feedback, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=trashcomment&p=1&c=1&_wpnonce=2644be40dc, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=moderated, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-general.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=editcomment&c=1, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=all}
+2022-11-26:13:13:02	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:13:02	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:13:02	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:13:02	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:13:02	root	ERROR	[Classes.py:340]	Unknown button ('button', '', '')
+2022-11-26:13:13:02	root	INFO	[Functions.py:833]	set_form_values got 5
+2022-11-26:13:13:02	root	WARNING	[Functions.py:794]	('search', None, None) was handled by default
+2022-11-26:13:13:02	root	INFO	[Functions.py:846]	set_form_values returned 4
+2022-11-26:13:13:03	root	INFO	[Classes.py:1451]	Adding requests from URLs
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://make.wordpress.org/community/organize-event-landing-page/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://make.wordpress.org/community/organize-event-landing-page/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://make.wordpress.org/community/organize-event-landing-page/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-writing.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-writing.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/upload.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/upload.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/users.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/users.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/theme-editor.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/theme-editor.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=post_tag 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=post_tag, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-install.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-install.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-permalink.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-permalink.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://www.meetup.com/buffalo-wordpress/events/289701695 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://www.meetup.com/buffalo-wordpress/events/289701695
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://www.meetup.com/buffalo-wordpress/events/289701695
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://buddypress.org/2022/11/buddypress-11-0-0-beta2/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://buddypress.org/2022/11/buddypress-11-0-0-beta2/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://buddypress.org/2022/11/buddypress-11-0-0-beta2/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-privacy.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-privacy.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/export-personal-data.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/export-personal-data.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/erase-personal-data.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/erase-personal-data.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=page 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=page, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/export.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/export.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-media.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-media.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://planet.wordpress.org/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://planet.wordpress.org/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://planet.wordpress.org/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=mine&user_id=2 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=mine&user_id=2, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=spamcomment&p=1&c=1&_wpnonce=2644be40dc 
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=trash 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=trash, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=unapprovecomment&p=1&c=1&_wpnonce=274e5479b7 
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-discussion.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-discussion.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/support/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/news/2022/11/state-of-the-word-2022/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/news/2022/11/state-of-the-word-2022/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/news/2022/11/state-of-the-word-2022/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-navigation 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-navigation, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-login.php?action=logout&_wpnonce=57021da80b 
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-editor.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-editor.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://central.wordcamp.org/schedule/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://central.wordcamp.org/schedule/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://central.wordcamp.org/schedule/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/ 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wpbody-content 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wpbody-content, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wptavern.com/dig-into-the-open-web 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wptavern.com/dig-into-the-open-web
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wptavern.com/dig-into-the-open-web
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=spam 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=spam, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/tools.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/tools.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=approvecomment&p=1&c=1&_wpnonce=274e5479b7 
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/?welcome=0 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/?welcome=0, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=approved 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=approved, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/post.php?post=1&action=edit 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/post.php?post=1&action=edit, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-layout 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-layout, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-reading.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-reading.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php?styles=open 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php?styles=open, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/article/dashboard-screen/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/article/dashboard-screen/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/support/article/dashboard-screen/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/index.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/index.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/wordpress-version/version-6-1-1/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/wordpress-version/version-6-1-1/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/support/wordpress-version/version-6-1-1/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-content 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-help-content, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/import.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/import.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/forums/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/forums/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/support/forums/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/#comment-1 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/#comment-1, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/news/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/news/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/news/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://make.wordpress.org/community/meetups-landing-page 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://make.wordpress.org/community/meetups-landing-page
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://make.wordpress.org/community/meetups-landing-page
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=category 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=category, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wp-toolbar 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/#wp-toolbar, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/# 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/#, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/ 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/2022/11/26/hello-world/, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://poststatus.com/wordpress-is-people-weekly-community-update/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://poststatus.com/wordpress-is-people-weekly-community-update/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://poststatus.com/wordpress-is-people-weekly-community-update/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/news/2022/11/the-month-in-wordpress-october-2022/ 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/news/2022/11/the-month-in-wordpress-october-2022/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/news/2022/11/the-month-in-wordpress-october-2022/
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-overview 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/#tab-panel-overview, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-health.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-health.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=post 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=post, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] https://wordpress.org/support/forum/requests-and-feedback 
+2022-11-26:13:13:03	root	DEBUG	[Functions.py:308]	Different origins http://wordpressbw.csl.toronto.edu/wp-admin/ and https://wordpress.org/support/forum/requests-and-feedback
+2022-11-26:13:13:03	root	INFO	[Classes.py:1459]	Not allowed to add edge: [get] http://wordpressbw.csl.toronto.edu/wp-login.php -(get None[False])-> [get] https://wordpress.org/support/forum/requests-and-feedback
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=trashcomment&p=1&c=1&_wpnonce=2644be40dc 
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=moderated 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=moderated, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-general.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-general.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=editcomment&c=1 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/comment.php?action=editcomment&c=1, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1453]	from URLs [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=all 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php?comment_status=all, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1461]	Adding requests from froms
+2022-11-26:13:13:03	root	INFO	[Classes.py:1464]	from forms [get] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1464]	from forms [post] http://wordpressbw.csl.toronto.edu/wp-admin/post.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [post] http://wordpressbw.csl.toronto.edu/wp-admin/post.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1464]	from forms [get] http://wordpressbw.csl.toronto.edu/wp-admin/ 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [get] http://wordpressbw.csl.toronto.edu/wp-admin/, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1464]	from forms [post] http://wordpressbw.csl.toronto.edu/wp-admin/admin-ajax.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [post] http://wordpressbw.csl.toronto.edu/wp-admin/admin-ajax.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1472]	Adding requests from events
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1475]	from events [event] http://wordpressbw.csl.toronto.edu/wp-login.php 
+2022-11-26:13:13:03	root	INFO	[Classes.py:127]	failed to add node [event] http://wordpressbw.csl.toronto.edu/wp-login.php, already added
+2022-11-26:13:13:03	root	INFO	[Classes.py:1484]	Adding requests from iframes
+2022-11-26:13:13:03	root	INFO	[Classes.py:1496]	Adding requests from ui_forms
+2022-11-26:13:13:03	root	INFO	[Functions.py:163]	Check edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php
+2022-11-26:13:13:03	root	INFO	[Functions.py:207]	Follow edge: [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php
+2022-11-26:13:13:04	root	INFO	[Classes.py:1341]	Current url: http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php
+2022-11-26:13:13:04	root	INFO	[Classes.py:1342]	Crawl (edge): [get] http://wordpressbw.csl.toronto.edu/wp-admin/ -(get None[False])-> [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php
+2022-11-26:13:13:04	root	WARNING	[Forms.py:56]	No inputs founds during parse, falling back to JavaScript
+2022-11-26:13:13:04	root	INFO	[Forms.py:66]	Found js form: Form(0, http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php, post)
+2022-11-26:13:13:04	root	INFO	[Forms.py:66]	Found js form: Form(0, http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php, get)
+2022-11-26:13:13:05	root	DEBUG	[Urls.py:121]	URLs from extract_urls {[get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php#, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-discussion.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php, [get] https://wordpress.org/support/article/plugins-themes-auto-updates/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=category, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-comments.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php#wp-toolbar, [get] http://wordpressbw.csl.toronto.edu/wp-admin/upload.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/users.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-writing.php, [get] https://wordpress.org/support/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php#tab-panel-compatibility-problems, [get] https://wordpress.org/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/theme-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php#tab-panel-plugins-themes-auto-updates, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit-tags.php?taxonomy=post_tag, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php?post_type=page, [get] http://wordpressbw.csl.toronto.edu/wp-login.php?action=logout&_wpnonce=57021da80b, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-install.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugin-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/profile.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-permalink.php, [get] http://wordpressbw.csl.toronto.edu/wp-login.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-reading.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-privacy.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/post-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/about.php, [get] http://wordpressbw.csl.toronto.edu/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/export-personal-data.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/index.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/erase-personal-data.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php#tab-panel-overview, [get] https://wordpress.org/support/article/managing-plugins/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/import.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/user-new.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/edit.php?post_type=page, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-editor.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/site-health.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php#wpbody-content, [get] http://wordpressbw.csl.toronto.edu/wp-admin/themes.php, [get] https://wordpress.org/support/forums/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/update-core.php, [get] https://wordpress.org/support/forum/requests-and-feedback, [get] http://wordpressbw.csl.toronto.edu/wp-admin/tools.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/export.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-general.php, [get] http://wordpressbw.csl.toronto.edu/wp-admin/options-media.php, [get] https://wordpress.org/plugins/, [get] http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php?paged=0, [get] http://wordpressbw.csl.toronto.edu/wp-admin/media-new.php}
+2022-11-26:13:13:06	root	WARNING	[Forms.py:56]	No inputs founds during parse, falling back to JavaScript
+2022-11-26:13:13:06	root	INFO	[Forms.py:66]	Found js form: Form(0, http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php, post)
+2022-11-26:13:13:06	root	INFO	[Forms.py:66]	Found js form: Form(0, http://wordpressbw.csl.toronto.edu/wp-admin/plugins.php, get)
+2022-11-26:13:13:06	root	INFO	[Functions.py:833]	set_form_values got 3
+2022-11-26:13:13:06	root	INFO	[Functions.py:846]	set_form_values returned 2
