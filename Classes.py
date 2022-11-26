@@ -487,6 +487,10 @@ class Crawler:
             print("run both crawler module and attack module")
         else:
             print("only run the crawler module")
+        now = datetime.now()
+        current_time = "Start Time = " + now.strftime("%H:%M:%S")
+        with open("time_log.txt", "a") as f:
+            f.write(current_time + "\n")
         self.root_req = Request("ROOTREQ", "get")
         req = Request(self.url, "get")
         self.graph.add(self.root_req)
@@ -571,7 +575,10 @@ class Crawler:
                 print("CTRL-C, abort mission")
                 #print(self.graph.toMathematica())
                 break
-
+        now = datetime.now()
+        current_time = "End Time = " + now.strftime("%H:%M:%S")
+        with open("time_log.txt", "a") as f:
+            f.write(current_time + "\n")   
         print("Done crawling")
         if(crawler_mode == False):
             print("Start Attacking")
