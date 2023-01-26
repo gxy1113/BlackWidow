@@ -1457,9 +1457,9 @@ class Crawler:
 
         logging.info("Adding requests from URLs")
         for req in reqs:
-            logging.info("from URLs %s " % str(req))
+            logging.info("from URLs% s " % str(req))
             new_edge = graph.create_edge(request, req, CrawlEdge(req.method, None, current_cookies), edge )
-            if allow_edge(graph, new_edge):
+            if allow_edge(graph, new_edge): #just checked the origin and whether the page is blocked
                 graph.add(req)
                 graph.connect(request, req, CrawlEdge(req.method, None, current_cookies), edge )
             else:
