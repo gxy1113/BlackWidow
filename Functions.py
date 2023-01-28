@@ -292,7 +292,7 @@ def allow_edge(graph, edge):
     blacklisted_terms = ['profile', 'update', 'password', 'maintenance', 'customize.php', 'xml', 'json', 'rss', 'Tsv', 'search.php',
                     'user/1/edit', 'user/2/edit', 'user/3/edit', 'CorePluginsAdmin', 'UsersManager', 'users.php', 'update', 'page=config', 
                     'people', 'roles', 'authentication', 'usermanager', 'user/user', '=acl', 'page=extension', 'mode=cookie', "edituser", 
-                    'help', 'r=user', 'r=admin', 'viewpmsg', 'logout']
+                    'help', 'r=user', 'r=admin', 'viewpmsg', 'logout', 'signout']
     # For example
     # blacklisted_terms.extend( ["logout"] )
     if blacklisted_terms:
@@ -416,7 +416,7 @@ def form_fill_file(filename):
 # Different values => Different Edges           (__eq__)
 # Different values => Same form on the webpage  (fuzzy)
 # Highly dependent on __eq__ for each element
-def fuzzy_eq(form1, form2):
+def fuzzy_eq(form1, form2): #this fails when there are anti-CSRF token on the page.
     if form1.action != form2.action:
         return False
     if form1.method != form2.method:
