@@ -90,14 +90,15 @@ def extract_events(driver):
     # Use JavaScript to find events
     resps = driver.execute_script("return catch_properties()")
     todo = json.loads(resps)
-
+    logging.info("events for property catch: " + str(resps))
     # From event listeners
     resps = driver.execute_script("return JSON.stringify(added_events)")
     todo += json.loads(resps)
-
+    logging.info("events for event listeners: " + str(resps))
     # From data-toggle
     resps = extract_data_toggle(driver)
     todo += resps
+    logging.info("events form data-toggle: " + str(resps))
 
 
     # Only works in Chrome DevTools

@@ -437,7 +437,7 @@ def update_value_with_js(driver, web_element, new_value):
 
 def form_fill(driver, target_form):
     logging.debug("Filling "+ str(target_form))
-
+    start_url = driver.current_url
     # Ensure we don't have any alerts before filling in form
     try:
         alert = driver.switch_to_alert()
@@ -701,6 +701,10 @@ def form_fill(driver, target_form):
             logging.info("No alert removed (probably due to there not being any)")
 
         # End of form fill if everything went well
+        end_url = driver.current_url
+        if start_url != end_url:
+            with open("logs/url_log.txt", "a") as f:
+                f.write(str(target_form) + "\n")   
         return True
 
     logging.error("error no form found (url:%s, form:%s)" % (driver.current_url, target_form) )

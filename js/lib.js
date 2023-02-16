@@ -265,9 +265,9 @@ function addEventListenerWrapper(elem, args) {
 
 
   // Could move and only use when XPATH fails
-  // console.log(elem)
-  // console.log("ID: " + elem.id)
-  // console.log("HTML: " + elem.outerHTML)
+ //  console.log(elem)
+   //console.log("ID: " + elem.id)
+   //console.log("HTML: " + elem.outerHTML)
 
 	tag = elem.tagName
 	dom_adress = "";
@@ -283,6 +283,7 @@ function addEventListenerWrapper(elem, args) {
   }
 
 	function_id = MD5(args[1].toString())
+	//function_id = (args[1].toString())
 	resp = {
 		"event" : args[0],
 		"function_id" : function_id,

@@ -1,1 +1,4 @@
 time*
+__pycache__
+logs/*
+successful*
