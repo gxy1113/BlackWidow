@@ -43,6 +43,7 @@ def extract_urls(driver):
     for el in elem:
         try:
             if el.get_attribute("href"):
+                #print(el.get_attribute("href"))
                 urls.add( url_to_request(el.get_attribute("href")) )
 
         except StaleElementReferenceException as e:

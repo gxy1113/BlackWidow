@@ -1432,6 +1432,8 @@ class Crawler:
             except:
                 logging.warning("Failed to login to potiential login form")
 
+        time.sleep(1) #wait for the page to be loaded, this is needed for some applications.
+
         # Extract urls, forms, elements, iframe etc
         reqs = extract_urls(driver)
         forms = extract_forms(driver)
