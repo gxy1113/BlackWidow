@@ -21,6 +21,7 @@ import logging
 import copy
 import time
 import operator
+from bs4 import BeautifulSoup
 
 import Classes
 from extractors.Events import extract_events
@@ -702,15 +703,38 @@ def form_fill(driver, target_form):
 
         # End of form fill if everything went well
         end_url = driver.current_url
-        if start_url != end_url:
+        print("form action: ", target_form.action)
+        print("end url: ", end_url)
+        end_html = driver.page_source
+        try:
+            error_flag = form_submission_checker(end_html)
+            if error_flag:
+                pass
+            else:
+                with open("logs/html_url_log.txt", "a") as f:
+                    f.write(target_form.action + "\n")  
+        except Exception as e:
+            print(e)
+        if end_url != target_form.action:
             with open("logs/url_log.txt", "a") as f:
-                f.write(str(target_form) + "\n")   
+                f.write(target_form.action + "\n")   
         return True
 
     logging.error("error no form found (url:%s, form:%s)" % (driver.current_url, target_form) )
     return False
     #raise Exception("error no form found (url:%s, form:%s)" % (driver.current_url, target_form) )
 
+def form_submission_checker(form_html):
+    if(len(form_html) == 0):
+        return False
+    soup = BeautifulSoup(form_html, 'html.parser')
+    error_keywords = ["alert-error", "form-error", "notice-error", "is-error"]
+    html_str = soup.body.prettify()
+    for keyword in error_keywords:
+        index = html_str.find(keyword)
+        if(index != -1):
+            print("error key words detected")
+            return True
 
 def ui_form_fill(driver, target_form):
     logging.debug("Filling ui_form "+ str(target_form))
