@@ -3,8 +3,8 @@ import sys
 import json
 form_url = []
 form_html_url = []
-url_log = "logs/url_log.txt"
-html_url_log = "logs/html_url_log.txt"
+url_log = "data/url_log.txt"
+html_url_log = "data/html_url_log.txt"
 event_edge = "event_edge.txt"
 appname = sys.argv[1]
 
@@ -56,8 +56,8 @@ def read_and_convert(path=""):
 form_url = read_log(url_log)
 form_html_url = read_log(html_url_log)
 success_forms = {"html": form_html_url, "url": form_url}
-event_dict = read_and_convert("logs/" + event_edge)
+event_dict = read_and_convert("data/" + event_edge)
 json_object = json.dumps(success_forms, indent=4)
-write_file("logs/", "event_edge.json", event_dict)
-with open("logs/" + appname + ".json", "w") as outfile:
+write_file("data/", "event_edge.json", event_dict)
+with open("data/" + appname + ".json", "w") as outfile:
     outfile.write(json_object)

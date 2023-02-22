@@ -722,12 +722,12 @@ def form_fill(driver, target_form):
             if error_flag:
                 pass
             else:
-                with open("logs/html_url_log.txt", "a") as f:
+                with open("data/html_url_log.txt", "a") as f:
                     f.write(target_form.action + "\n")  
         except Exception as e:
             print(e)
         if end_url != target_form.action:
-            with open("logs/url_log.txt", "a") as f:
+            with open("data/url_log.txt", "a") as f:
                 f.write(target_form.action + "\n")   
         return True
 
