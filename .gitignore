@@ -2,3 +2,4 @@ time*
 __pycache__
 logs/*
 successful*
+attack_lookup*
