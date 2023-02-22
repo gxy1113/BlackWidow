@@ -84,7 +84,6 @@ def dom_depth(edge):
 # Execute the path necessary to reach the state
 def find_state(driver, graph, edge):
     path = rec_find_path(graph, edge)
-
     for edge_in_path in path:
         method = edge_in_path.value.method
         method_data = edge_in_path.value.method_data
@@ -313,10 +312,21 @@ def allow_edge(graph, edge):
         logging.debug("Different origins %s and %s" % (str(from_url), str(to_url)))
         return False
 
-
-
-
-
+def load_file(folder, name):
+    try:
+        with open(folder + 'a_' + name, 'r') as f:
+            data = json.load(f)
+        return data
+    except:
+        return False
+    
+def write_file(folder, name, data):
+    try:
+        with open(folder + 'a_' + name, 'w') as f:
+            json.dump(data, f, indent=4)
+    except:
+        print("failed to write to file")
+        return False
 
 def execute_event(driver, do):
     logging.info("We need to trigger [" +  do.event + "] on " + do.addr)
@@ -704,8 +714,8 @@ def form_fill(driver, target_form):
 
         # End of form fill if everything went well
         end_url = driver.current_url
-        print("form action: ", target_form.action)
-        print("end url: ", end_url)
+        #print("form action: ", target_form.action)
+        #print("end url: ", end_url)
         end_html = driver.page_source
         try:
             error_flag = form_submission_checker(end_html)

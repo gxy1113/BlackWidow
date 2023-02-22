@@ -1355,7 +1355,7 @@ class Crawler:
     def rec_crawl(self):
         driver = self.driver
         graph = self.graph
-
+        edge_start_time = time.time()
         todo = self.load_page(driver, graph)
         if not todo:
             print("Done crawling")
@@ -1441,6 +1441,16 @@ class Crawler:
         ui_forms = extract_ui_forms(driver)
         events = extract_events(driver)
         iframes = extract_iframes(driver)
+        
+        """ event_set = list()
+        for event in events:
+            event_set.append(repr(event))
+        event_json = load_file('logs/', 'event.json')
+        if(event_json != False):
+            event_json[repr(edge)] = event_set
+        else:
+            event_json = {repr(edge): event_set}
+        write_file('logs/', 'event.json', event_json) """
 
         # Check if we need to wait for asynch
         try:
@@ -1541,7 +1551,15 @@ class Crawler:
         # Clear commad
         if found_command:
             open("command.txt", "w+").write("")
-
+        
+        edge_end_time = time.time()
+        method = edge.value.method
+        method_data = edge.value.method_data
+        edge_dict = {"edge": repr(edge), "event": repr(method_data), "start_time": str(edge_start_time), "end_time": str(edge_end_time)}
+        with open("logs/event_edge.txt", "a") as f:
+                f.write(repr(edge_dict) + "\n")  
+        if(method == 'event'):
+            pass
         return True
 
 
