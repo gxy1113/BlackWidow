@@ -46,9 +46,14 @@ def read_and_convert(path=""):
         with open(path) as f:
             for line in f:
                 line_str = line.strip()
+                line_str = line_str.replace("\"", "\\\"")
                 line_str = line_str.replace("\'", "\"")
-                line_dict = json.loads(line_str)
-                log.append(line_dict)
+                try:
+                    line_dict = json.loads(line_str)
+                    log.append(line_dict)
+                except Exception as e:
+                    print(e)
+                    print(line_str)
         f.close()
     return log
 

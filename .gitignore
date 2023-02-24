@@ -3,3 +3,5 @@ __pycache__
 logs/*
 successful*
 attack_lookup*
+*.tar.gz
+data/*

@@ -1556,9 +1556,9 @@ class Crawler:
         method = edge.value.method
         method_data = edge.value.method_data
         edge_dict = {"edge": repr(edge), "event": repr(method_data), "start_time": str(edge_start_time), "end_time": str(edge_end_time)}
-        if(method == 'event'):
+        if(True):
             with open("data/event_edge.txt", "a") as f:
-                f.write(repr(edge_dict) + "\n")  
+                f.write(str(edge_dict) + "\n")  
             f.close()
         return True
 
