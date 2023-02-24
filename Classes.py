@@ -1551,12 +1551,17 @@ class Crawler:
         # Clear commad
         if found_command:
             open("command.txt", "w+").write("")
-        
+        #Log the path ended with event node
         edge_end_time = time.time()
         method = edge.value.method
         method_data = edge.value.method_data
-        edge_dict = {"edge": repr(edge), "event": repr(method_data), "start_time": str(edge_start_time), "end_time": str(edge_end_time)}
-        if(True):
+        log_path = rec_find_path(graph, edge)
+        log_path_str = list()
+        for log_edge in log_path:
+            log_edge_string = repr(log_edge)
+            log_path_str.append(log_edge_string)
+        edge_dict = {"path": log_path_str, "event": method_data, "start_time": edge_start_time, "end_time": edge_end_time}
+        if(method_data == "event"):
             with open("data/event_edge.txt", "a") as f:
                 f.write(str(edge_dict) + "\n")  
             f.close()
