@@ -81,15 +81,39 @@ def dom_depth(edge):
         edge = edge.parent
     return depth
 
+def get_rrweb_events(driver):
+    events = []
+    try:
+        events = driver.execute_script("var temp_events = events; events = []; return temp_events;")
+    except:
+        print("could not acquire rrweb events function")
+    return events
+
+def check_new_eles(rrweb_events):
+    add_on = []
+    for event in rrweb_events:
+        if 'type' in event.keys():
+            if(event['type'] == 3):
+                data = event['data']
+                if data['source'] == 0 or data['source'] == 8:
+                    adds = data['adds']
+                    for add_item in adds:
+                        if 'node' in add_item.keys():
+                            node = add_item['node']
+                            add_on.append(node)
+    return add_on
+
 # Execute the path necessary to reach the state
 def find_state(driver, graph, edge):
     path = rec_find_path(graph, edge)
     for edge_in_path in path:
+        index = path.index(edge_in_path)
         method = edge_in_path.value.method
         method_data = edge_in_path.value.method_data
         logging.info("find_state method %s" % method)
 
         if allow_edge(graph, edge_in_path):
+            get_rrweb_events(driver) #For cleanup the events
             if method == "get":
                 driver.get(edge_in_path.n2.value.url)
             elif method == "form":
@@ -113,6 +137,10 @@ def find_state(driver, graph, edge):
             elif method == "event":
                 event = method_data
                 execute_event(driver, event)
+                if index == len(path) - 1:
+                    rrweb_events = get_rrweb_events(driver)
+                    new_eles = check_new_eles(rrweb_events)
+                    edge_in_path.new_eles = len(new_eles)
                 remove_alerts(driver)
             elif method == "iframe":
                 enter_status = enter_iframe(driver, method_data)
@@ -728,6 +756,8 @@ def form_fill(driver, target_form):
             print(e)
         if end_url != target_form.action:
             with open("data/url_log.txt", "a") as f:
+                f.write(target_form.action + "\n")
+        with open("data/all_forms.txt", "a") as f:
                 f.write(target_form.action + "\n")   
         return True
 

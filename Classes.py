@@ -110,6 +110,7 @@ class Graph:
             self.value = value
             self.visited = False
             self.parent = parent
+            self.new_eles = 0
         def __eq__(self, other):
             return self.n1 == other.n1 and self.n2 == other.n2 and self.value == other.value
         def __hash__(self):
@@ -1555,15 +1556,10 @@ class Crawler:
         edge_end_time = time.time()
         method = edge.value.method
         method_data = edge.value.method_data
-        log_path = rec_find_path(graph, edge)
-        log_path_str = list()
-        for log_edge in log_path:
-            log_edge_string = repr(log_edge)
-            log_path_str.append(log_edge_string)
-        edge_dict = {"path": log_path_str, "event": method_data, "start_time": edge_start_time, "end_time": edge_end_time}
-        if(method_data == "event"):
+        path_dict = {"edge": repr(edge), "event": repr(method_data), "start_time": str(edge_start_time), "end_time": str(edge_end_time), "new_eles": str(edge.new_eles)}
+        if(method == "event"):
             with open("data/event_edge.txt", "a") as f:
-                f.write(str(edge_dict) + "\n")  
+                f.write(str(path_dict) + "\n")  
             f.close()
         return True
 

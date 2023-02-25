@@ -46,6 +46,9 @@ driver.add_script( open("js/window_wrapper.js", "r").read() )
 driver.add_script( open("js/forms.js", "r").read() )
 driver.add_script( open("js/xss_xhr.js", "r").read() )
 driver.add_script( open("js/remove_alerts.js", "r").read() )
+#rrweb additions
+driver.add_script( open("js/rrweb-record.min.js", "r").read() )
+driver.add_script( open("js/event.js", "r").read() )
 
 if args.url:
     url = args.url
