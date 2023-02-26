@@ -320,7 +320,7 @@ def allow_edge(graph, edge):
     blacklisted_terms = ["profile", "update", "password", "maintenance", "customize.php", "xml", "json", "rss", "Tsv", "search.php", "plugin",
                     "user/1/edit", "user/2/edit", "user/3/edit", "CorePluginsAdmin", "UsersManager", "users.php", "update", "page=config", 
                     "people", "roles", "authentication", "usermanager", "user/user", "=acl", "page=extension", "mode=cookie", "edituser", 
-                    "help", "r=user", "viewpmsg", "logout", "signout", "javascript", "sim", "appearance", "admin/modules", 
+                    "help", "r=user", "viewpmsg", "logout", "signout", "javascript", "sim", "appearance", "admin/modules", "r=admin",
                     ".xml", ".rss", ".tsv", ".png", ".jpg", "mode=cookie", "modulesadmin", "sign out", "log out", "database", "atom"]
     # For example
     # blacklisted_terms.extend( ["logout"] )
