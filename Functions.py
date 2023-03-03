@@ -345,7 +345,8 @@ def load_file(folder, name):
         with open(folder + 'a_' + name, 'r') as f:
             data = json.load(f)
         return data
-    except:
+    except Exception as e:
+        print(e)
         return False
     
 def write_file(folder, name, data):
@@ -477,6 +478,7 @@ def update_value_with_js(driver, web_element, new_value):
 
 def form_fill(driver, target_form):
     logging.debug("Filling "+ str(target_form))
+    print("Filling "+ str(target_form))
     start_url = driver.current_url
     # Ensure we don't have any alerts before filling in form
     try:
@@ -744,21 +746,23 @@ def form_fill(driver, target_form):
         end_url = driver.current_url
         #print("form action: ", target_form.action)
         #print("end url: ", end_url)
+        print(target_form.method)
         end_html = driver.page_source
+        time.sleep(1)
         try:
             error_flag = form_submission_checker(end_html)
-            if error_flag:
-                pass
-            else:
+            #error_flag = False
+            if error_flag and target_form.method == "post":
                 with open("data/html_url_log.txt", "a") as f:
                     f.write(target_form.action + "\n")  
         except Exception as e:
             print(e)
-        if end_url != target_form.action:
+        if end_url == target_form.action and target_form.method == "post":
             with open("data/url_log.txt", "a") as f:
                 f.write(target_form.action + "\n")
-        with open("data/all_forms.txt", "a") as f:
-                f.write(target_form.action + "\n")   
+        if target_form.method == "post":
+            with open("data/all_forms.txt", "a") as f:
+                    f.write(target_form.action + "\n")   
         return True
 
     logging.error("error no form found (url:%s, form:%s)" % (driver.current_url, target_form) )
@@ -771,6 +775,7 @@ def form_submission_checker(form_html):
     soup = BeautifulSoup(form_html, 'html.parser')
     error_keywords = ["alert-error", "form-error", "notice-error", "is-error"]
     html_str = soup.body.prettify()
+    #print(html_str)
     for keyword in error_keywords:
         index = html_str.find(keyword)
         if(index != -1):

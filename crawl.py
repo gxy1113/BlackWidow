@@ -11,6 +11,7 @@ parser = argparse.ArgumentParser(description='Crawler')
 parser.add_argument("--debug", action='store_true',  help="Dont use path deconstruction and recon scan. Good for testing single URL")
 parser.add_argument("--url", help="Custom URL to crawl")
 parser.add_argument("--crawler", action='store_true', help="Only run the crawler")
+parser.add_argument("--form_tester", action='store_true', help='Run the form tester')
 args = parser.parse_args()
 
 # Clean form_files/dynamic
@@ -23,7 +24,7 @@ WebDriver.add_script = add_script
 
 
 chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument("--headless")
+#chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-web-security")
 chrome_options.add_argument("--disable-xss-auditor")
 
@@ -50,12 +51,14 @@ driver.add_script( open("js/remove_alerts.js", "r").read() )
 driver.add_script( open("js/rrweb-record.min.js", "r").read() )
 driver.add_script( open("js/event.js", "r").read() )
 
+
 if args.url:
     url = args.url
-    Crawler(driver, url).start(args.debug, args.crawler)
+    if args.form_tester:
+        Crawler(driver, url).form_test(driver, args.debug)
+    else:
+        Crawler(driver, url).start(args.debug, args.crawler)
 else:
     print("Please use --url")
-
-
 
 

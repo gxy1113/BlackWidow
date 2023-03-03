@@ -483,6 +483,30 @@ class Crawler:
 
         logging.info("Init crawl on " + url)
 
+    def form_test(self, driver, debug_mode=False):
+        az_forms = load_file("az_forms/", "sim_forms.json")
+        driver.get(self.url)
+        login_form = find_login_form(driver, 1)
+        if login_form:
+            logging.info("Found login form")
+            new_form = set_form_values(set([login_form])).pop()
+            try:
+                print("Logging in")
+                form_fill(driver, new_form)
+            except:
+                logging.warning("Failed to login to potiential login form")
+        time.sleep(1)
+        for url in az_forms:
+            form_urls = az_forms[url]
+            driver.get(url)
+            for form_action in form_urls:
+                target_form = Form()
+                target_form.action = form_action
+                target_form.method = "post"
+                form_eles = driver.find_elements_by_tag_name("form")
+                for ele in form_eles:
+                    current_form = parse_form(ele, driver)
+
     def start(self, debug_mode=False, crawler_mode=False):
         if(crawler_mode == False):
             print("run both crawler module and attack module")
