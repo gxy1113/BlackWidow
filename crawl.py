@@ -24,7 +24,7 @@ WebDriver.add_script = add_script
 
 
 chrome_options = webdriver.ChromeOptions()
-#chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-web-security")
 chrome_options.add_argument("--disable-xss-auditor")
 
@@ -48,8 +48,8 @@ driver.add_script( open("js/forms.js", "r").read() )
 driver.add_script( open("js/xss_xhr.js", "r").read() )
 driver.add_script( open("js/remove_alerts.js", "r").read() )
 #rrweb additions
-driver.add_script( open("js/rrweb-record.min.js", "r").read() )
-driver.add_script( open("js/event.js", "r").read() )
+#driver.add_script( open("js/rrweb-record.min.js", "r").read() )
+#driver.add_script( open("js/event.js", "r").read() )
 
 
 if args.url:

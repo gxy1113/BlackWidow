@@ -113,7 +113,7 @@ def find_state(driver, graph, edge):
         logging.info("find_state method %s" % method)
 
         if allow_edge(graph, edge_in_path):
-            get_rrweb_events(driver) #For cleanup the events
+            #get_rrweb_events(driver) #For cleanup the events
             if method == "get":
                 driver.get(edge_in_path.n2.value.url)
             elif method == "form":
@@ -137,10 +137,10 @@ def find_state(driver, graph, edge):
             elif method == "event":
                 event = method_data
                 execute_event(driver, event)
-                if index == len(path) - 1:
+                """ if index == len(path) - 1:
                     rrweb_events = get_rrweb_events(driver)
                     new_eles = check_new_eles(rrweb_events)
-                    edge_in_path.new_eles = len(new_eles)
+                    edge_in_path.new_eles = len(new_eles) """
                 remove_alerts(driver)
             elif method == "iframe":
                 enter_status = enter_iframe(driver, method_data)
@@ -746,18 +746,18 @@ def form_fill(driver, target_form):
         end_url = driver.current_url
         #print("form action: ", target_form.action)
         #print("end url: ", end_url)
-        print(target_form.method)
-        end_html = driver.page_source
-        time.sleep(1)
-        try:
+        #print(target_form.method)
+        #end_html = driver.page_source
+        #time.sleep(1)
+        """ try:
             error_flag = form_submission_checker(end_html)
             #error_flag = False
-            if error_flag and target_form.method == "post":
+            if (not error_flag) and target_form.method == "post":
                 with open("data/html_url_log.txt", "a") as f:
                     f.write(target_form.action + "\n")  
         except Exception as e:
-            print(e)
-        if end_url == target_form.action and target_form.method == "post":
+            print(e) """
+        if end_url != target_form.action and target_form.method == "post":
             with open("data/url_log.txt", "a") as f:
                 f.write(target_form.action + "\n")
         if target_form.method == "post":
