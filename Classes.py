@@ -503,9 +503,17 @@ class Crawler:
                 target_form = Form()
                 target_form.action = form_action
                 target_form.method = "post"
-                form_eles = driver.find_elements_by_tag_name("form")
-                for ele in form_eles:
-                    current_form = parse_form(ele, driver)
+                element = driver.find_element_by_xpath("//*[@id=\"board\"]/tbody/tr[1]/th[1]/div[2]/div/a")
+                element.click()
+                time.sleep(1)
+                forms = extract_forms(driver)
+                forms = set_form_values(forms)
+                for form in forms:
+                    try:
+                        form_fill(driver, form)
+                    except:
+                        logging.warning("failed to fill form")
+                    break
 
     def start(self, debug_mode=False, crawler_mode=False):
         if(crawler_mode == False):
