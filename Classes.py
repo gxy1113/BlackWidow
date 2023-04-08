@@ -1292,10 +1292,10 @@ class Crawler:
                     print("prev was form, ATTACK")
                     logging.info("prev was form, ATTACK, " + str(prev_form))
                     # TODO should we skip attacking some elements?
-                    self.path_attack_form(driver, prev_edge)
                     if not prev_form in self.attacked_forms:
                         self.attacked_forms[prev_form] = 0
                     self.attacked_forms[prev_form] += 1
+                    self.path_attack_form(driver, prev_edge)
 
                     print("prev was form, TRACK")
                     logging.info("prev was form, TRACK")
