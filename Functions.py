@@ -853,7 +853,7 @@ def set_standard_values(old_form):
             elif form_el.name == "email":
                 form_el.value = "vmuser8080@outlook.com"
             else:
-                form_el.value = "jAEkPot"
+                form_el.value = "admin"
         elif form_el.itype == "textarea":
             form_el.value = "jAEkPot"
         elif form_el.itype == "email":
@@ -872,7 +872,7 @@ def set_standard_values(old_form):
             pass
         else:
             logging.warning( str(form_el) + " was handled by default")
-            form_el.value = "jAEkPot"
+            form_el.value = "admin"
 
     return form
 
