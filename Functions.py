@@ -483,6 +483,7 @@ def form_fill(driver, target_form):
     logging.debug("Filling "+ str(target_form))
     print("Filling "+ str(target_form))
     start_url = driver.current_url
+    typed_text = []
     # Ensure we don't have any alerts before filling in form
     try:
         alert = driver.switch_to_alert()
@@ -828,8 +829,12 @@ def ui_form_fill(driver, target_form):
 def set_standard_values(old_form):
     form = copy.deepcopy(old_form)
     first_radio = True
-
+    timestamp = int(time.time())
+    timestamp = str(timestamp)
+    cnt = 0
     for form_el in form.inputs.values():
+        cnt = cnt + 1;
+        acc_time = str(cnt) + timestamp[-6:]
         if form_el.itype == "file":
             form_el.value = "jaekpot.jpg"
         elif form_el.itype == "radio":
@@ -855,7 +860,7 @@ def set_standard_values(old_form):
             else:
                 form_el.value = "admin"
         elif form_el.itype == "textarea":
-            form_el.value = "jAEkPot"
+            form_el.value = "jAEkPot" + acc_time
         elif form_el.itype == "email":
             form_el.value = "vmuser8080@outlook.com"
         elif form_el.itype == "hidden":
