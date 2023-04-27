@@ -484,7 +484,7 @@ class Crawler:
         logging.info("Init crawl on " + url)
 
     def form_test(self, driver, debug_mode=False):
-        az_forms = load_file("az_forms/", "sim_forms.json")
+        #az_forms = load_file("az_forms/", "sim_forms.json")
         driver.get(self.url)
         login_form = find_login_form(driver, 1)
         if login_form:
@@ -496,7 +496,19 @@ class Crawler:
             except:
                 logging.warning("Failed to login to potiential login form")
         time.sleep(1)
-        for url in az_forms:
+        url = "http://hotcrpct.csl.toronto.edu/settings/decisions"
+        driver.get(url)
+        forms = extract_forms(driver)
+        print(len(forms))
+        forms = set_form_values(forms)
+        for form in forms:
+            print(type(form))
+            try:
+                form_fill(driver, form)
+            except:
+                logging.warning("failed to fill form")
+            break
+        """for url in az_forms:
             form_urls = az_forms[url]
             driver.get(url)
             for form_action in form_urls:
@@ -513,7 +525,7 @@ class Crawler:
                         form_fill(driver, form)
                     except:
                         logging.warning("failed to fill form")
-                    break
+                    break"""
 
     def start(self, debug_mode=False, crawler_mode=False):
         if(crawler_mode == False):
