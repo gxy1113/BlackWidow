@@ -322,7 +322,7 @@ def allow_edge(graph, edge):
                     "profile", "update", "password", "maintenance", "xml", "json", "rss", "Tsv", "plugin",
                     "user/1/edit", "user/2/edit", "user/3/edit", "CorePluginsAdmin", "UsersManager", "users.php", "page=config", 
                     "people", "roles", "authentication", "usermanager", "user/user", "=acl", "page=extension", "mode=cookie", "edituser", 
-                    "help", "r=admin%2Fsetting", "viewpmsg", "logout", "signout", "javascript", "sim", "mode=auth",
+                    "help", "r=admin%2Fsetting", "viewpmsg", "javascript", "mode=auth",
                     "atom", "appearance", "admin/modules", "authentication", "acp_board", "acp_captcha", "delete_cookies", "admin%2Fauthentication", 
                     "r=ldap%2Fadmin", "admin%2Fmodule", "%2Faccount"]
     # For example
@@ -586,6 +586,8 @@ def form_fill(driver, target_form):
                         print("IGNORE HIDDEN")
                         #update_value_with_js(driver, iel, i.value)
                     elif iel.get_attribute("type") in ["text", "email", "url"]:
+                        if iel.get_attribute("type") == "text":
+                            typed_text.append(i.value)
                         if iel.get_attribute("maxlength"):
                             try:
                                 driver.execute_script("arguments[0].removeAttribute('maxlength')", iel)
@@ -610,6 +612,7 @@ def form_fill(driver, target_form):
                             logging.warning("[inputs] faild to send keys to " + str(form_iel) + " Trying javascript" )
                             update_value_with_js(driver, iel, i.value)
                     else:
+                        typed_text.append(i.value)
                         logging.warning("[inputs] using default clear/send_keys for " + str(form_iel) )
                         try:
                             iel.clear()
@@ -746,45 +749,63 @@ def form_fill(driver, target_form):
         except:
             logging.info("No alert removed (probably due to there not being any)")
 
-        # End of form fill if everything went well
-        end_url = driver.current_url
-        #print("form action: ", target_form.action)
-        #print("end url: ", end_url)
-        #print(target_form.method)
-        #end_html = driver.page_source
-        #time.sleep(1)
-        """ try:
-            error_flag = form_submission_checker(end_html)
-            #error_flag = False
-            if (not error_flag) and target_form.method == "post":
-                with open("data/html_url_log.txt", "a") as f:
-                    f.write(target_form.action + "\n")  
-        except Exception as e:
-            print(e) """
-        if end_url != target_form.action and target_form.method == "post":
-            with open("data/url_log.txt", "a") as f:
-                f.write(target_form.action + "\n")
-        if target_form.method == "post":
-            with open("data/all_forms.txt", "a") as f:
-                    f.write(target_form.action + "\n")   
+        if target_form.method == "post": # Collect successful form submission
+            time.sleep(1) #wait for the page to be load.
+            end_html = driver.page_source
+            bw_forms = load_file("data/", "bw_forms.json")
+            form_url = urljoin(start_url, target_form.action)
+            if bw_forms == False:
+                bw_forms = dict()
+            if start_url in bw_forms:
+                pass
+            else:
+                bw_forms[start_url] = dict()
+            tmp_dict = bw_forms[start_url]
+            if form_url in tmp_dict:
+                pass
+            else:
+                tmp_dict[form_url] = 0
+            bw_forms[start_url] = tmp_dict
+            success_flag = False
+            try:
+                success_flag = form_submission_checker(end_html, typed_text) #this function takes less than a second to execute, which should be fine.
+            except Exception as e:
+                print(e)
+            print("success_flag: ", success_flag)
+            if success_flag:
+                tmp_dict = bw_forms[start_url]
+                tmp_dict[form_url] = 1
+                bw_forms[start_url] = tmp_dict
+            write_file("data/", "bw_forms.json", bw_forms)
         return True
 
     logging.error("error no form found (url:%s, form:%s)" % (driver.current_url, target_form) )
     return False
     #raise Exception("error no form found (url:%s, form:%s)" % (driver.current_url, target_form) )
 
-def form_submission_checker(form_html):
+def form_submission_checker(form_html, typed_text):
     if(len(form_html) == 0):
         return False
     soup = BeautifulSoup(form_html, 'html.parser')
-    error_keywords = ["alert-error", "form-error", "notice-error", "is-error"]
+    page_text = soup.get_text() #get the text of the html
+    page_text = re.sub(r'\W+', '', page_text)
+    html_str = soup.body.prettify()
+    success_keywords = ["has been added", "notice-success", "success"]
     html_str = soup.body.prettify()
     #print(html_str)
-    for keyword in error_keywords:
+    print(typed_text)
+    for keyword in success_keywords:
         index = html_str.find(keyword)
         if(index != -1):
-            print("error key words detected")
             return True
+    for text in typed_text:
+        text = str(text)
+        if len(text) < 5:
+            continue
+        index = page_text.find(text)
+        if(index != -1):
+            return True
+    return False
 
 def ui_form_fill(driver, target_form):
     logging.debug("Filling ui_form "+ str(target_form))
@@ -826,7 +847,7 @@ def ui_form_fill(driver, target_form):
     submit_element =  driver.find_element_by_xpath(target_form.submit)
     submit_element.click()
 
-def set_standard_values(old_form):
+def set_standard_values(old_form, _login):
     form = copy.deepcopy(old_form)
     first_radio = True
     timestamp = int(time.time())
@@ -859,8 +880,12 @@ def set_standard_values(old_form):
                 form_el.value = "vmuser8080@outlook.com"
             else:
                 form_el.value = "admin"
+                if _login == 0:
+                    form_el.value = form_el.value + acc_time
         elif form_el.itype == "textarea":
-            form_el.value = "jAEkPot" + acc_time
+            form_el.value = "jAEkPot"
+            if _login == 0:
+                form_el.value = form_el.value + acc_time
         elif form_el.itype == "email":
             form_el.value = "vmuser8080@outlook.com"
         elif form_el.itype == "hidden":
@@ -878,6 +903,8 @@ def set_standard_values(old_form):
         else:
             logging.warning( str(form_el) + " was handled by default")
             form_el.value = "admin"
+            if _login == 0:
+                form_el.value = form_el.value + acc_time
 
     return form
 
@@ -914,13 +941,13 @@ def set_checkboxes(forms):
                 new_forms.add(new_form)
     return new_forms
 
-def set_form_values(forms):
+def set_form_values(forms, _login=0):
     logging.info("set_form_values got " + str(len(forms)))
     new_forms = set()
     # Set values for forms.
     # Could also create copies of forms to test different values
     for old_form in forms:
-        new_forms.add( set_standard_values(old_form) )
+        new_forms.add( set_standard_values(old_form, _login) )
 
     # Handle submits
     new_forms = set_submits(new_forms)

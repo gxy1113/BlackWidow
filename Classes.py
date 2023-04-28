@@ -500,7 +500,7 @@ class Crawler:
         driver.get(url)
         forms = extract_forms(driver)
         print(len(forms))
-        forms = set_form_values(forms)
+        forms = set_form_values(forms, 0)
         for form in forms:
             print(type(form))
             try:
@@ -1470,19 +1470,19 @@ class Crawler:
         if login_form:
             logging.info("Found login form")
             print("We want to test edge: ", edge)
-            new_form = set_form_values(set([login_form])).pop()
+            new_form = set_form_values(set([login_form]), 1).pop()
             try:
                 print("Logging in")
                 form_fill(driver, new_form)
+                time.sleep(1) #wait for the page to be loaded, this is needed for some applications.
             except:
                 logging.warning("Failed to login to potiential login form")
 
-        time.sleep(1) #wait for the page to be loaded, this is needed for some applications.
 
         # Extract urls, forms, elements, iframe etc
         reqs = extract_urls(driver)
         forms = extract_forms(driver)
-        forms = set_form_values(forms)
+        forms = set_form_values(forms, 0)
         ui_forms = extract_ui_forms(driver)
         events = extract_events(driver)
         iframes = extract_iframes(driver)
