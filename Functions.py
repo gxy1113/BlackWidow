@@ -881,7 +881,7 @@ def set_standard_values(old_form, _login):
             else:
                 form_el.value = "root"
                 if _login == 0:
-                    form_el.value = form_el.value + acc_time
+                    form_el.value = "jAEkPot" + acc_time
         elif form_el.itype == "textarea":
             form_el.value = "jAEkPot"
             if _login == 0:
@@ -904,7 +904,7 @@ def set_standard_values(old_form, _login):
             logging.warning( str(form_el) + " was handled by default")
             form_el.value = "root"
             if _login == 0:
-                form_el.value = form_el.value + acc_time
+                form_el.value = "jAEkPot" + acc_time
 
     return form
 
