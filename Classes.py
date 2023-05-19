@@ -857,7 +857,7 @@ class Crawler:
     def get_payloads(self):
         payloads = []
         # %RAND will be replaced, useful for tracking
-        alert_text = "%RAND"
+        alert_text = "jaek%RAND"
         xss_payloads = ["<script>xss("+alert_text+")</script>",
                         "\"'><script>xss("+alert_text+")</script>",
                         '<img src="x" onerror="xss('+alert_text+')">',
@@ -867,7 +867,7 @@ class Crawler:
                         "</title></option><script>xss("+alert_text+")</script>",
                         ]
 
-        # xss_payloads = ['<a href="" jaekpot-attribute="'+alert_text+'">jaekpot</a>']
+        #xss_payloads = ['jaek'+alert_text]
         return xss_payloads
 
     def arm_payload(self, payload_template):
@@ -1297,7 +1297,7 @@ class Crawler:
 
 
                 prev_form = prev_edge.value.method_data
-                """ # print(prev_form)
+                # print(prev_form)
                 # print(prev_form.__hash__())
                 # print("FORM TO DO: ")
                 if not (prev_form in self.attacked_forms):
@@ -1313,7 +1313,7 @@ class Crawler:
                     logging.info("prev was form, TRACK")
                     self.track_form(driver, prev_edge)
                 else:
-                    logging.warning("Form already done! " + str(prev_form) + str(prev_form.inputs)) """
+                    logging.warning("Form already done! " + str(prev_form) + str(prev_form.inputs))
 
 
             elif prev_edge.value.method == "ui_form":

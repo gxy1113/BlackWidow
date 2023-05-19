@@ -750,8 +750,8 @@ def form_fill(driver, target_form):
             logging.info("No alert removed (probably due to there not being any)")
 
         if target_form.method == "post": # Collect successful form submission
-            time.sleep(1) #wait for the page to be load.
-            end_html = driver.page_source
+            #time.sleep(1) #wait for the page to be load.
+            """ end_html = driver.page_source
             bw_forms = load_file("data/", "bw_forms.json")
             form_url = urljoin(start_url, target_form.action)
             if bw_forms == False:
@@ -776,7 +776,17 @@ def form_fill(driver, target_form):
                 tmp_dict = bw_forms[start_url]
                 tmp_dict[form_url] = 1
                 bw_forms[start_url] = tmp_dict
-            write_file("data/", "bw_forms.json", bw_forms)
+            write_file("data/", "bw_forms.json", bw_forms) """
+            bw_form_texts = load_file("data/", "bw_form_texts.json")
+            form_url = urljoin(start_url, target_form.action)
+            if bw_form_texts == False:
+                bw_form_texts = dict()
+            if form_url in bw_form_texts:
+                for text in typed_text:
+                    bw_form_texts[form_url].append(text)
+            else:
+                bw_form_texts[form_url] = typed_text
+            write_file("data/", "bw_form_texts.json", bw_form_texts)
         return True
 
     logging.error("error no form found (url:%s, form:%s)" % (driver.current_url, target_form) )
@@ -878,12 +888,14 @@ def set_standard_values(old_form, _login):
                 form_el.value = 1
             elif form_el.name == "email":
                 form_el.value = "vmuser8080@outlook.com"
-            else:
-                form_el.value = "root"
                 if _login == 0:
-                    form_el.value = "jAEkPot" + acc_time
+                    form_el.value = "jAEk" + acc_time + "@localhost.com"
+            else:
+                form_el.value = "admin"
+                if _login == 0:
+                    form_el.value = "jAEk" + acc_time
         elif form_el.itype == "textarea":
-            form_el.value = "jAEkPot"
+            form_el.value = "jAEk"
             if _login == 0:
                 form_el.value = form_el.value + acc_time
         elif form_el.itype == "email":
@@ -902,9 +914,9 @@ def set_standard_values(old_form, _login):
             pass
         else:
             logging.warning( str(form_el) + " was handled by default")
-            form_el.value = "root"
+            form_el.value = "admin"
             if _login == 0:
-                form_el.value = "jAEkPot" + acc_time
+                form_el.value = "jAEk" + acc_time
 
     return form
 
