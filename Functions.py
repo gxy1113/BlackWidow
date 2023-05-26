@@ -662,6 +662,7 @@ def form_fill(driver, target_form):
                                             ta.get_attribute("value") )
             if form_ta in target_form.inputs:
                 i = target_form.inputs[form_ta]
+                typed_text.append(i.value)
                 try:
                     ta.clear()
                     ta.send_keys(i.value)

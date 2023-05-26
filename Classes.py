@@ -1297,7 +1297,7 @@ class Crawler:
 
 
                 prev_form = prev_edge.value.method_data
-                # print(prev_form)
+                print(prev_form)
                 # print(prev_form.__hash__())
                 # print("FORM TO DO: ")
                 if not (prev_form in self.attacked_forms):
