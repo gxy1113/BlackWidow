@@ -324,7 +324,7 @@ def allow_edge(graph, edge):
                     "people", "roles", "authentication", "usermanager", "user/user", "=acl", "page=extension", "mode=cookie", "edituser", 
                     "help", "r=admin%2Fsetting", "viewpmsg", "javascript", "mode=auth",
                     "atom", "appearance", "admin/modules", "authentication", "acp_board", "acp_captcha", "delete_cookies", "admin%2Fauthentication", 
-                    "r=ldap%2Fadmin", "admin%2Fmodule", "%2Faccount"]
+                    "r=ldap%2Fadmin", "admin%2Fmodule", "%2Faccount", "UserModificationController", "UserCredentialController", "TwoFactorController"]
     # For example
     # blacklisted_terms.extend( ["logout"] )
     if blacklisted_terms:
