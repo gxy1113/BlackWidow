@@ -322,7 +322,7 @@ def allow_edge(graph, edge):
                     "profile", "update", "password", "maintenance", "xml", "json", "rss", "Tsv", "plugin",
                     "user/1/edit", "user/2/edit", "user/3/edit", "CorePluginsAdmin", "UsersManager", "users.php", "page=config", 
                     "people", "roles", "authentication", "usermanager", "user/user", "=acl", "page=extension", "mode=cookie", "edituser", 
-                    "help", "r=admin%2Fsetting", "viewpmsg", "javascript", "mode=auth", "login_token",
+                    "help", "r=admin%2Fsetting", "viewpmsg", "javascript", "mode=auth", "login_token", "register_token",
                     "atom", "appearance", "admin/modules", "authentication", "acp_board", "acp_captcha", "delete_cookies", "admin%2Fauthentication", 
                     "r=ldap%2Fadmin", "admin%2Fmodule", "%2Faccount", "UserModificationController", "UserCredentialController", "TwoFactorController"]
     # For example
