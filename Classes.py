@@ -481,6 +481,8 @@ class Crawler:
         self.done_form = {}
         self.max_done_form = 5
 
+        self.login_attempt = 0
+
         logging.info("Init crawl on " + url)
 
     def form_test(self, driver, debug_mode=False):
@@ -1467,13 +1469,14 @@ class Crawler:
         early_state = self.early_gets < self.max_early_gets
         login_form = find_login_form(driver, graph, early_state)
 
-        if login_form:
+        if login_form and self.login_attempt == 0:
             logging.info("Found login form")
             print("We want to test edge: ", edge)
             new_form = set_form_values(set([login_form]), 1).pop()
             try:
                 print("Logging in")
                 form_fill(driver, new_form)
+                self.login_attempt = 1
                 time.sleep(1) #wait for the page to be loaded, this is needed for some applications.
             except:
                 logging.warning("Failed to login to potiential login form")
