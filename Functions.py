@@ -890,15 +890,15 @@ def set_standard_values(old_form, _login):
             elif form_el.name == "email":
                 form_el.value = "vmuser8080@outlook.com"
                 if _login == 0:
-                    form_el.value = "jAEk" + acc_time + "@localhost.com"
+                    form_el.value = "jk" + acc_time + "@localhost.com"
             else:
                 form_el.value = "admin"
                 if _login == 0:
-                    form_el.value = "jAEk" + acc_time
+                    form_el.value = "jk" + acc_time
         elif form_el.itype == "textarea":
             form_el.value = "jAEk"
             if _login == 0:
-                form_el.value = form_el.value + acc_time
+                form_el.value = "jk" + acc_time
         elif form_el.itype == "email":
             form_el.value = "vmuser8080@outlook.com"
         elif form_el.itype == "hidden":
@@ -917,7 +917,7 @@ def set_standard_values(old_form, _login):
             logging.warning( str(form_el) + " was handled by default")
             form_el.value = "admin"
             if _login == 0:
-                form_el.value = "jAEk" + acc_time
+                form_el.value = "jk" + acc_time
 
     return form
 

@@ -671,7 +671,7 @@ class Crawler:
 
         # TODO make global somehow or better
         # %RAND will be replaced, useful for tracking
-        alert_text = "jaekpot%RAND"
+        alert_text = "jk%RAND"
         xss_payloads = ["<script>xss('"+alert_text+"')</script>",
                         'x" onerror="xss(\''+alert_text+'\')"']
 
