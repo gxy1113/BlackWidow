@@ -859,7 +859,7 @@ class Crawler:
     def get_payloads(self):
         payloads = []
         # %RAND will be replaced, useful for tracking
-        alert_text = "jaek%RAND"
+        alert_text = "jk%RAND"
         xss_payloads = ["<script>xss("+alert_text+")</script>",
                         "\"'><script>xss("+alert_text+")</script>",
                         '<img src="x" onerror="xss('+alert_text+')">',
@@ -1485,9 +1485,14 @@ class Crawler:
         # Extract urls, forms, elements, iframe etc
         reqs = extract_urls(driver)
         forms = extract_forms(driver)
+        print(forms)
         forms = set_form_values(forms, 0)
         ui_forms = extract_ui_forms(driver)
-        events = extract_events(driver)
+        try:
+            events = extract_events(driver)
+        except Exception:
+            print(Exception)
+            events = set()
         iframes = extract_iframes(driver)
         
         """ event_set = list()

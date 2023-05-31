@@ -866,7 +866,8 @@ def set_standard_values(old_form, _login):
     cnt = 0
     for form_el in form.inputs.values():
         cnt = cnt + 1;
-        acc_time = str(cnt) + timestamp[-6:]
+        #acc_time = str(cnt) + timestamp[-6:]
+        acc_time = "epot"
         if form_el.itype == "file":
             form_el.value = "jaekpot.jpg"
         elif form_el.itype == "radio":
@@ -892,7 +893,7 @@ def set_standard_values(old_form, _login):
                 if _login == 0:
                     form_el.value = "jk" + acc_time + "@localhost.com"
             else:
-                form_el.value = "root"
+                form_el.value = "admin"
                 if _login == 0:
                     form_el.value = "jk" + acc_time
         elif form_el.itype == "textarea":
@@ -915,7 +916,7 @@ def set_standard_values(old_form, _login):
             pass
         else:
             logging.warning( str(form_el) + " was handled by default")
-            form_el.value = "root"
+            form_el.value = "admin"
             if _login == 0:
                 form_el.value = "jk" + acc_time
 
