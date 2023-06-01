@@ -491,20 +491,20 @@ class Crawler:
         login_form = find_login_form(driver, 1)
         if login_form:
             logging.info("Found login form")
-            new_form = set_form_values(set([login_form])).pop()
+            new_form = set_form_values(set([login_form]), 1).pop()
             try:
                 print("Logging in")
                 form_fill(driver, new_form)
             except:
                 logging.warning("Failed to login to potiential login form")
         time.sleep(1)
-        url = "http://hotcrpct.csl.toronto.edu/settings/decisions"
+        url = "http://dokuwikicj.csl.toronto.edu/doku.php?id=start&do=edit"
         driver.get(url)
         forms = extract_forms(driver)
         print(len(forms))
         forms = set_form_values(forms, 0)
         for form in forms:
-            print(type(form))
+            print(form)
             try:
                 form_fill(driver, form)
             except:
@@ -1299,7 +1299,6 @@ class Crawler:
 
 
                 prev_form = prev_edge.value.method_data
-                print(prev_form)
                 # print(prev_form.__hash__())
                 # print("FORM TO DO: ")
                 if not (prev_form in self.attacked_forms):
@@ -1311,7 +1310,7 @@ class Crawler:
                     self.attacked_forms[prev_form] += 1
                     self.path_attack_form(driver, prev_edge)
 
-                    print("prev was form, TRACK")
+                    #print("prev was form, TRACK")
                     logging.info("prev was form, TRACK")
                     self.track_form(driver, prev_edge)
                 else:
@@ -1485,7 +1484,6 @@ class Crawler:
         # Extract urls, forms, elements, iframe etc
         reqs = extract_urls(driver)
         forms = extract_forms(driver)
-        print(forms)
         forms = set_form_values(forms, 0)
         ui_forms = extract_ui_forms(driver)
         try:

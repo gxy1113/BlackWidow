@@ -213,7 +213,7 @@ def check_edge(driver, graph, edge):
             graph.data['form_urls'][purl.path] = 0
         graph.data['form_urls'][purl.path] += 1
 
-        if graph.data['form_urls'][purl.path] > 10:
+        if graph.data['form_urls'][purl.path] > 100:
             logging.info("FROM ACTION URL (path) %s, visited more than 10 times, mark as done" % str(edge.n2.value.url))
             return False
         else:
