@@ -213,11 +213,12 @@ def check_edge(driver, graph, edge):
             graph.data['form_urls'][purl.path] = 0
         graph.data['form_urls'][purl.path] += 1
 
-        if graph.data['form_urls'][purl.path] > 100:
+        """ if graph.data['form_urls'][purl.path] > 100:
             logging.info("FROM ACTION URL (path) %s, visited more than 10 times, mark as done" % str(edge.n2.value.url))
             return False
         else:
-            return True
+            return True """
+        return True
     elif method == "event":
         if dom_depth(edge) > 10:
             logging.info("Dom depth (10) reached! Discard edge %s " % ( str(edge) ) )
@@ -893,7 +894,7 @@ def set_standard_values(old_form, _login):
                 if _login == 0:
                     form_el.value = "jk" + acc_time + "@localhost.com"
             else:
-                form_el.value = "admin"
+                form_el.value = "root"
                 if _login == 0:
                     form_el.value = "jk" + acc_time
         elif form_el.itype == "textarea":
@@ -916,7 +917,7 @@ def set_standard_values(old_form, _login):
             pass
         else:
             logging.warning( str(form_el) + " was handled by default")
-            form_el.value = "admin"
+            form_el.value = "root"
             if _login == 0:
                 form_el.value = "jk" + acc_time
 

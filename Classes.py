@@ -1301,20 +1301,20 @@ class Crawler:
                 prev_form = prev_edge.value.method_data
                 # print(prev_form.__hash__())
                 # print("FORM TO DO: ")
-                if not (prev_form in self.attacked_forms):
+                """ if not (prev_form in self.attacked_forms):
                     print("prev was form, ATTACK")
                     logging.info("prev was form, ATTACK, " + str(prev_form))
                     # TODO should we skip attacking some elements?
                     if not prev_form in self.attacked_forms:
                         self.attacked_forms[prev_form] = 0
                     self.attacked_forms[prev_form] += 1
-                    self.path_attack_form(driver, prev_edge)
+                    #self.path_attack_form(driver, prev_edge)
 
                     #print("prev was form, TRACK")
                     logging.info("prev was form, TRACK")
                     self.track_form(driver, prev_edge)
                 else:
-                    logging.warning("Form already done! " + str(prev_form) + str(prev_form.inputs))
+                    logging.warning("Form already done! " + str(prev_form) + str(prev_form.inputs)) """
 
 
             elif prev_edge.value.method == "ui_form":
