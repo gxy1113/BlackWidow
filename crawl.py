@@ -7,12 +7,35 @@ import argparse
 
 from Classes import *
 
+app_url =  {
+     "wordpress":"http://webapp1.csl.toronto.edu:8080/wp-login.php",
+     "wordpress2":"http://wordpressnf5.csl.toronto.edu/wp-login.php",
+     "drupal":"http://webapp1.csl.toronto.edu:9200/user/login",
+     "humhub":"http://webapp1.csl.toronto.edu:8300/index.php?r=user%2Fauth%2Flogin",
+     "impresscms":"http://webapp1.csl.toronto.edu:8600/user.php",
+     "matomo":"http://matomoxss.csl.toronto.edu/",
+     "hotcrp":"http://webapp1.csl.toronto.edu:8500/testconf/",
+     "gitlab":"http://gitlab1106.csl.toronto.edu/users/sign_in",
+     "opencart":"http://webapp1.csl.toronto.edu:8800/test/",
+     "dokuwiki":"http://webapp1.csl.toronto.edu:8400/doku.php?id=wiki:welcome&do=login",
+     "kanboard":"http://webapp1.csl.toronto.edu:8200/",
+     "phpbb": "http://webapp1.csl.toronto.edu:8700/index.php",
+     "wackopicko": "http://10.99.0.187:8080/users/login.php"
+}
+
+
 parser = argparse.ArgumentParser(description='Crawler')
 parser.add_argument("--debug", action='store_true',  help="Dont use path deconstruction and recon scan. Good for testing single URL")
 parser.add_argument("--url", help="Custom URL to crawl")
+parser.add_argument("--app", help="Custom Application to crawl")
 parser.add_argument("--crawler", action='store_true', help="Only run the crawler")
 parser.add_argument("--form_tester", action='store_true', help='Run the form tester')
 args = parser.parse_args()
+
+url = args.url
+if args.app:
+    url = app_url[args.app]
+print("URL: " + url)
 
 # Clean form_files/dynamic
 root_dirname = os.path.dirname(__file__)
@@ -52,8 +75,7 @@ driver.add_script( open("js/remove_alerts.js", "r").read() )
 #driver.add_script( open("js/event.js", "r").read() )
 
 
-if args.url:
-    url = args.url
+if args.url or args.app:
     if args.form_tester:
         Crawler(driver, url).form_test(driver, args.debug)
     else:

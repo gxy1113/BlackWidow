@@ -917,7 +917,7 @@ def set_standard_values(old_form, _login):
             pass
         else:
             logging.warning( str(form_el) + " was handled by default")
-            form_el.value = "root"
+            form_el.value = "admin"
             if _login == 0:
                 form_el.value = "jk" + acc_time
 
