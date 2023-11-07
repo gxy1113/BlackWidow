@@ -894,7 +894,7 @@ def set_standard_values(old_form, _login):
                 if _login == 0:
                     form_el.value = "jk" + acc_time + "@localhost.com"
             else:
-                form_el.value = "root"
+                form_el.value = "admin"
                 if _login == 0:
                     form_el.value = "jk" + acc_time
         elif form_el.itype == "textarea":
