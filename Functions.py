@@ -751,7 +751,7 @@ def form_fill(driver, target_form):
         except:
             logging.info("No alert removed (probably due to there not being any)")
 
-        if target_form.method == "post": # Collect successful form submission
+        if target_form.method == "post" or target_form == "get": # Collect successful form submission
             #time.sleep(1) #wait for the page to be load.
             """ end_html = driver.page_source
             bw_forms = load_file("data/", "bw_forms.json")
