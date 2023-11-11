@@ -895,7 +895,7 @@ def set_standard_values(old_form, _login):
                 if _login == 0:
                     form_el.value = "jk" + acc_time + "@localhost.com"
             else:
-                form_el.value = "admin"
+                form_el.value = "jkepot"
                 if _login == 0:
                     form_el.value = "jk" + acc_time
         elif form_el.itype == "textarea":
@@ -913,12 +913,12 @@ def set_standard_values(old_form, _login):
             # TODO Look at min/max/step/maxlength to pick valid numbers
             form_el.value = "1"
         elif form_el.itype == "iframe":
-            form_el.value = "jAEkPot"
+            form_el.value = "jkepot"
         elif form_el.itype == "button":
             pass
         else:
             logging.warning( str(form_el) + " was handled by default")
-            form_el.value = "admin"
+            form_el.value = "jkepot"
             if _login == 0:
                 form_el.value = "jk" + acc_time
 
