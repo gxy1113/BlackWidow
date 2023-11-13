@@ -15,7 +15,7 @@ app_url =  {
      "impresscms":"http://webapp1.csl.toronto.edu:8600/user.php",
      "matomo":"http://matomoxss.csl.toronto.edu/",
      "hotcrp":"http://webapp1.csl.toronto.edu:8500/testconf/",
-     "gitlab":"http://gitlab1106.csl.toronto.edu/users/sign_in",
+     "gitlab":"http://gitlab1101.csl.toronto.edu/",
      "opencart":"http://webapp1.csl.toronto.edu:8800/test/",
      "dokuwiki":"http://webapp1.csl.toronto.edu:8400/doku.php?id=wiki:welcome&do=login",
      "kanboard":"http://webapp1.csl.toronto.edu:8200/",
@@ -47,7 +47,7 @@ WebDriver.add_script = add_script
 
 
 chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument("--headless")
+#chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-web-security")
 chrome_options.add_argument("--disable-xss-auditor")
 
