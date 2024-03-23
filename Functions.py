@@ -320,13 +320,13 @@ def allow_edge(graph, edge):
     # TODO: More general solutions ? e.g regex patterns, counts etc.
     blacklisted_terms = [ ".xml", ".rss", ".tsv", ".png", ".jpg", "mode=cookie", "%2Fdisable",
                     "modulesadmin", "database", "atom", "profile", "update-core", "password", "maintenance", "xml", "json", "rss", "Tsv", "plugin",
-                    "user/1/edit", "user/2/edit", "user/3/edit", "CorePluginsAdmin", "UsersManager", "users.php", "page=config", 
+                    "user/1/edit", "user/2/edit", "user/3/edit", "CorePluginsAdmin", "UsersManager", "user-edit.php", "page=config", 
                     "people", "roles", "authentication", "usermanager", "user/user", "=acl", "page=extension", "mode=cookie", "edituser", 
                     "help", "r=admin%2Fsetting", "viewpmsg", "logout", "signout", "javascript", "mode=auth",
                     "atom", "appearance", "admin/modules", "authentication", "acp_board", "acp_captcha", 
                     "delete_cookies", "admin%2Fauthentication", "UserListController",
                     "r=ldap%2Fadmin", "admin%2Fmodule", "%2Faccount", "user%2Fdelete", "user%2Fedit", 
-                    "acp_users", "mode=reg_details", "users", "fct=user", "UserModificationController", "UserCredentialController", "TwoFactorController"]
+                    "acp_users", "mode=reg_details", "user-edit", "fct=user", "UserModificationController", "UserCredentialController", "TwoFactorController"]
     # For example
     # blacklisted_terms.extend( ["logout"] )
     if blacklisted_terms:
