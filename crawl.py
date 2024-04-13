@@ -8,18 +8,18 @@ import argparse
 from Classes import *
 
 app_url =  {
-     "wordpress":"http://webapp1.csl.toronto.edu:8080/wp-login.php",
+     "wordpress":"http://webapp2.csl.toronto.edu:8080/wp-login.php",
      "wordpress2":"http://wordpressnf5.csl.toronto.edu/wp-login.php",
-     "drupal":"http://webapp1.csl.toronto.edu:9200/user/login",
-     "humhub":"http://webapp1.csl.toronto.edu:8300/index.php?r=user%2Fauth%2Flogin",
-     "impresscms":"http://webapp1.csl.toronto.edu:8600/user.php",
+     "drupal":"http://webapp2.csl.toronto.edu:9200/user/login",
+     "humhub":"http://webapp2.csl.toronto.edu:8300/index.php?r=user%2Fauth%2Flogin",
+     "impresscms":"http://webapp2.csl.toronto.edu:8600/user.php",
      "matomo":"http://matomoxss.csl.toronto.edu/",
-     "hotcrp":"http://webapp1.csl.toronto.edu:8500/testconf/",
+     "hotcrp":"http://webapp2.csl.toronto.edu:8500/testconf/",
      "gitlab":"http://gitlab1101.csl.toronto.edu/",
-     "opencart":"http://webapp1.csl.toronto.edu:8800/test/",
-     "dokuwiki":"http://webapp1.csl.toronto.edu:8400/doku.php?id=wiki:welcome&do=login",
-     "kanboard":"http://webapp1.csl.toronto.edu:8200/",
-     "phpbb": "http://webapp1.csl.toronto.edu:8700/index.php",
+     "opencart":"http://webapp2.csl.toronto.edu:8800/test/",
+     "dokuwiki":"http://webapp2.csl.toronto.edu:8400/doku.php?id=wiki:welcome&do=login",
+     "kanboard":"http://webapp2.csl.toronto.edu:8200/",
+     "phpbb": "http://webapp2.csl.toronto.edu:8700/index.php",
      "wackopicko": "http://10.99.0.187:8080/users/login.php"
 }
 
