@@ -322,7 +322,7 @@ def allow_edge(graph, edge):
                     "modulesadmin", "database", "atom", "profile", "update", "password", "maintenance", "plugin",
                     "user/1/edit", "user/2/edit", "user/3/edit", "CorePluginsAdmin", "UsersManager", "page=config", 
                     "people", "roles", "authentication", "usermanager", "user/user", "=acl", "page=extension", "mode=cookie", "edituser", 
-                    "help", "r=admin%2Fsetting", "viewpmsg", "logout", "signout", "javascript", "login", "signin", "mode=auth",
+                    "help", "r=admin%2Fsetting", "viewpmsg", "logout", "signout", "javascript", "signin", "mode=auth",
                     "atom", "appearance", "admin/modules", "authentication", "acp_board", "acp_captcha", 
                     "delete_cookies", "admin%2Fauthentication", "UserListController",
                     "r=ldap%2Fadmin", "admin%2Fmodule", "%2Faccount", "user%2Fdelete", "user%2Fedit", 
