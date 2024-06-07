@@ -869,7 +869,7 @@ def set_standard_values(old_form, _login):
     for form_el in form.inputs.values():
         cnt = cnt + 1
         acc_time = str(cnt) + timestamp[-6:]
-        #acc_time = "epot"
+        acc_time = "epot"
         if form_el.itype == "file":
             form_el.value = "jaekpot.jpg"
         elif form_el.itype == "radio":
